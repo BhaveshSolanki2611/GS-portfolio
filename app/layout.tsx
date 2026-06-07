@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -16,8 +16,15 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#080B14",
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gracysingh.dev"),
+  metadataBase: new URL("https://gracy-portfolio-fawn.vercel.app"),
   title: "Gracy Singh | Data Analyst Portfolio",
   description:
     "B.Tech ECE+AI/ML graduate from NSUT. Data Analyst specializing in SQL, Python, Power BI, and Excel. Available for data analytics roles.",

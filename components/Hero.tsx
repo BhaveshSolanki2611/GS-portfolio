@@ -140,8 +140,8 @@ export default function Hero() {
       </div>
 
       {/* ── Main Content ── */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 lg:py-0">
-        <div className="flex flex-col items-center gap-16 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 py-24 lg:py-0">
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           {/* ════════════════════ LEFT COLUMN ════════════════════ */}
           <motion.div
             className="flex flex-col items-center text-center lg:items-start lg:text-left lg:max-w-[580px]"
@@ -163,7 +163,7 @@ export default function Hero() {
             {/* ── Name ── */}
             <motion.h1
               variants={slideInLeft}
-              className="mt-6 text-5xl font-black leading-tight tracking-tight md:text-7xl lg:text-[5.25rem] font-sora"
+              className="mt-6 text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-7xl lg:text-[5.25rem] font-sora"
             >
               <span
                 className="inline-block bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(99,102,241,0.3)]"
@@ -294,15 +294,14 @@ export default function Hero() {
 
           {/* ════════════════════ RIGHT COLUMN — PROFILE ORB + ORBITING BADGES ════════════════════ */}
           <motion.div
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px]"
             variants={fadeInScale}
             initial="hidden"
             animate="visible"
-            style={{ width: '480px', height: '480px' }}
           >
             {/* Radial glow behind the orb */}
             <div
-              className="absolute w-[480px] h-[480px] rounded-full opacity-40"
+              className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] rounded-full opacity-40"
               style={{
                 background:
                   'radial-gradient(circle, rgba(99,102,241,0.18) 0%, rgba(6,182,212,0.08) 40%, transparent 70%)',
@@ -311,7 +310,7 @@ export default function Hero() {
 
             {/* Rotating outer ring */}
             <div
-              className="absolute w-[300px] h-[300px] md:w-[340px] md:h-[340px] rounded-full"
+              className="absolute w-[220px] h-[220px] sm:w-[270px] sm:h-[270px] md:w-[320px] md:h-[320px] lg:w-[340px] lg:h-[340px] rounded-full"
               style={{
                 background:
                   'conic-gradient(from 0deg, #6366F1, #06B6D4, #A855F7, #6366F1)',
@@ -327,7 +326,7 @@ export default function Hero() {
 
             {/* Second, larger rotating ring (reversed) */}
             <div
-              className="absolute w-[330px] h-[330px] md:w-[370px] md:h-[370px] rounded-full opacity-40"
+              className="absolute w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[370px] lg:h-[370px] rounded-full opacity-40"
               style={{
                 background:
                   'conic-gradient(from 180deg, transparent, #6366F1, transparent, #06B6D4, transparent)',
@@ -342,7 +341,7 @@ export default function Hero() {
             </div>
 
             {/* Profile image */}
-            <div className="relative z-10 h-56 w-56 md:h-64 md:w-64 overflow-hidden rounded-full border-2 border-white/15 shadow-2xl shadow-indigo-500/10">
+            <div className="relative z-10 h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64 overflow-hidden rounded-full border-2 border-white/15 shadow-2xl shadow-indigo-500/10">
               <Image
                 src="/profile.png"
                 alt="Gracy Singh — Data Analyst"
