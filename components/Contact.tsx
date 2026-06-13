@@ -55,7 +55,7 @@ const itemVariants = {
 };
 
 const inputClasses =
-  'w-full bg-[#0A0F1A] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] outline-none transition-all duration-200';
+  'w-full bg-[#0A0F1A] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] outline-none transition-all duration-200 appearance-none';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -253,7 +253,9 @@ export default function Contact() {
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="off"
                     className={inputClasses}
+                    style={{ backgroundColor: '#0A0F1A', colorScheme: 'dark' }}
                   />
 
                   {/* Email */}
@@ -263,7 +265,9 @@ export default function Contact() {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="off"
                     className={inputClasses}
+                    style={{ backgroundColor: '#0A0F1A', colorScheme: 'dark' }}
                   />
 
                   {/* Subject */}
@@ -273,7 +277,9 @@ export default function Contact() {
                     placeholder="Subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    autoComplete="off"
                     className={inputClasses}
+                    style={{ backgroundColor: '#0A0F1A', colorScheme: 'dark' }}
                   />
 
                   {/* Message */}
@@ -283,7 +289,9 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
+                    autoComplete="off"
                     className={`${inputClasses} resize-none`}
+                    style={{ backgroundColor: '#0A0F1A', colorScheme: 'dark' }}
                   />
 
                   {/* Error message */}
